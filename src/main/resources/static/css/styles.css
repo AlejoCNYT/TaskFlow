@@ -1,0 +1,144 @@
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #ECF0F1;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #2C3E50;
+    color: white;
+    padding: 1rem 1rem 0.25rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* franja de navegación blanca debajo del título */
+nav {
+    background: white;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    gap: 1.5rem;
+    border-radius: 0 0 6px 6px;
+}
+
+nav a {
+    color: #2C3E50 !important;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 4px 2px;
+    position: relative;
+}
+
+nav a.active {
+    color: #2C3E50 !important;
+    border-bottom: 2px solid #2980B9;
+}
+
+nav a:focus {
+    outline: none;
+}
+
+nav a::-moz-focus-inner {
+    border: 0;
+}
+
+nav a::selection {
+    background: rgba(255,255,255,0.2);
+    color: #2C3E50;
+}
+
+.card, .welcome-card, .stat-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.welcome-card h2 {
+    margin-top: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.stat-card {
+    flex: 1 1 300px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.stat-card p {
+    margin: 4px 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #2c3e50;
+}
+
+input, textarea, select, button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+button {
+    background: #3498DB;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.button.cancel {
+    background: #BDC3C7;
+    color: #2C3E50;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.5rem;
+    border: 1px solid #BDC3C7;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 4px;
+    background: white; /* opcional: para contraste si el logo es claro */
+}

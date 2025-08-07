@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Ítems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script th:src="@{/js/app.js}"></script>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <img th:src="@{css/images/logo.png}" alt="Logo" class="header-logo" />
+        <h1>TaskFlow</h1>
+    </div>
+    <nav>
+        <a th:href="@{/}">Inicio</a>
+        <a th:href="@{/item/form}">Registrar Ítem</a>
+        <a th:href="@{/items}" class="active">Consultar Ítems</a>
+    </nav>
+</header>
+
+<main>
+    <div class="card">
+        <h2>Lista de Ítems</h2>
+        <input id="search" type="text" placeholder="Buscar..." onkeyup="filterItems()" />
+
+        <table id="itemsTable">
+            <thead>
+            <tr><th>Ítem</th><th>Acciones</th></tr>
+            </thead>
+            <tbody>
+            <tr th:each="it : ${items}">
+                <td th:text="${it.nombre}"></td>
+                <td>
+                    <a th:href="@{'/item/form/' + ${it.id}}">Editar</a>
+                    <a th:href="@{'/item/delete/' + ${it.id}}">Eliminar</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+</body>
+</html>
